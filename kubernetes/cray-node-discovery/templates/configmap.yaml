@@ -1,0 +1,13 @@
+# Copyright 2020, Cray Inc. All Rights Reserved.
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  # XXX ConfigMap name and namespace are hardcoded in
+  # XXX `nd.source.networks.discovery()`.
+  name: cray-node-discovery
+  namespace: services
+  labels:
+{{ include "cray-node-discovery.labels" . | indent 4 }}
+data:
+  networks: {{ .Values.networks | toJson | quote }}
