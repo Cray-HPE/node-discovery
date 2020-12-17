@@ -1,0 +1,19 @@
+# Copyright 2018, 2019, Cray Inc. All Rights Reserved.
+---
+- name: Put the kubernetes configuration file for {{ role_path | basename }} in place
+  template:
+    src: cray-nd.yaml.j2
+    dest: /root/k8s/cray-nd.yaml
+  run_once: true
+  delegate_to: "{{ groups['managers'][0] }}"
+
+- name: Apply {{ role_path | basename }} Kubernetes specs
+  command: kubectl replace --force -f cray-nd.yaml
+  args:
+    chdir: /root/k8s
+  run_once: true
+  delegate_to: "{{ groups['managers'][0] }}"
+
+- name: Record that {{ role_path | basename }} ran  # Workaround https://github.com/ansible/ansible/issues/31751
+  set_fact:
+    cray_node_discovery_ran: True

@@ -1,0 +1,10 @@
+{# Copyright 2018, Cray Inc. All Rights Reserved. #}
+---
+apiVersion: v1
+data:
+  networks: |
+    {{ networks | tojson }}
+kind: ConfigMap
+metadata:
+  name: cray-node-discovery
+  namespace: {{ cray_node_discovery_namespace }}

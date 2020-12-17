@@ -1,0 +1,38 @@
+# Default values for cray-node-discovery.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+imagesHost: dtr.dev.cray.com:443
+
+image:
+  repository: cray/cray-node-discovery
+  pullPolicy: IfNotPresent
+
+nameOverride: ""
+fullnameOverride: ""
+
+resources:
+  requests:
+    memory: "50Mi"
+    cpu: "1m"
+  limits:
+    memory: "100Mi"
+    cpu: "2"
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+networks:
+  node_management:
+    blocks:
+      ipv4:
+      - label: river
+        network: "10.252.0.0/17"
+  hardware_management:
+    blocks:
+      ipv4:
+      - label: river
+        network: "10.254.0.0/17"

@@ -1,0 +1,10 @@
+Dockerfile
+.dockerignore
+.git/
+.gitignore
+ansible_framework/
+kubernetes/
+results/
+Jenkinsfile*
+jenkinsfile_linter.py
+*.spec
