@@ -1,6 +1,0 @@
-# Copyright 2018, 2019, Cray Inc. All Rights Reserved.
----
-cray_node_discovery_image_version: "latest"
-
-# Kubernetes Namespace
-cray_node_discovery_namespace: services
