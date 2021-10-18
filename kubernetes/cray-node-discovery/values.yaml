@@ -2,7 +2,7 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
-imagesHost: dtr.dev.cray.com:443
+imagesHost: "artifactory.algol60.net"
 
 image:
   repository: cray/cray-node-discovery
@@ -10,6 +10,15 @@ image:
 
 nameOverride: ""
 fullnameOverride: ""
+
+securityContext:
+  allowPrivilegeEscalation: false
+  capabilities:
+    drop: ["all"]
+  readOnlyRootFilesystem: true
+  runAsGroup: 65534
+  runAsNonRoot: true
+  runAsUser: 65534
 
 resources:
   requests:
