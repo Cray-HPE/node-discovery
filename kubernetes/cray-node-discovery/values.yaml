@@ -6,7 +6,7 @@ imagesHost: "artifactory.algol60.net"
 
 image:
   repository: cray/cray-node-discovery
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
 
 nameOverride: ""
 fullnameOverride: ""
