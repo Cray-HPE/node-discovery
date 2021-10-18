@@ -2,10 +2,9 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
-imagesHost: "artifactory.algol60.net"
-
 image:
-  repository: cray/cray-node-discovery
+  repository: artifactory.algol60.net/cray/cray-node-discovery
+  # tag defaults to chart appVersion
   pullPolicy: Always
 
 nameOverride: ""
