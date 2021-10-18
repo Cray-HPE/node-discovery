@@ -9,10 +9,6 @@ keywords:
 home: https://github.com/Cray-HPE/node-discovery
 sources:
   - https://github.com/Cray-HPE/node-discovery
-dependencies:
-  - name: node-feature-discovery
-    version: 0.7.0
-    repository: https://github.com/kubernetes-sigs/node-feature-discovery
 maintainers:
   - name: Bo Quan
     url: https://github.com/bo-quan
