@@ -1,18 +1,17 @@
 apiVersion: v2
-version: 0.7.0
+version: 0.9.0
 name: cray-node-discovery
 description: Node feature discovery for detecting hardware features and system configuration
 keywords:
-  - kubernetes
   - node-discovery
   - discovery
 home: https://github.com/Cray-HPE/node-discovery
 sources:
   - https://github.com/Cray-HPE/node-discovery
 maintainers:
-  - name: Bo Quan
+  - name: bo-quan
     url: https://github.com/bo-quan
-appVersion: "v0.7.0"
+appVersion: "v0.9.0"
 annotations:
   artifacthub.io/images: |
     - name: curl
