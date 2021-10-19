@@ -23,7 +23,7 @@ spec:
             valueFrom:
               fieldRef:
                 fieldPath: spec.nodeName
-          image: "{{ .Values.image.repository }}:{{ .Chart.AppVersion }}"
+          image: {{ .Values.image.repository }}:{{ default .Chart.AppVersion .Values.image.tag }}
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           name: node-discovery
           volumeMounts:
