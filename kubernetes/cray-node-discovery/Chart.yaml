@@ -14,6 +14,6 @@ maintainers:
 appVersion: "v0.9.0"
 annotations:
   artifacthub.io/images: |
-    - name: curl
-      image: artifactory.algol60.net/csm-docker/stable/docker.io/curlimages/curl:7.73.0
+    - name: cray-node-discovery
+      image: artifactory.algol60.net/csm-docker/stable/cray-node-discovery:v0.9.0
   artifacthub.io/license: MIT
