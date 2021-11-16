@@ -11,9 +11,6 @@ sources:
 maintainers:
   - name: bo-quan
     url: https://github.com/bo-quan
-appVersion: "v0.9.0"
+appVersion: 0.9.0
 annotations:
-  artifacthub.io/images: |
-    - name: cray-node-discovery
-      image: artifactory.algol60.net/csm-docker/stable/cray-node-discovery:v0.9.0
   artifacthub.io/license: MIT
