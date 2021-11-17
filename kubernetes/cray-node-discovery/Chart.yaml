@@ -11,6 +11,5 @@ sources:
 maintainers:
   - name: bo-quan
     url: https://github.com/bo-quan
-appVersion: 0.9.0
 annotations:
   artifacthub.io/license: MIT
