@@ -22,10 +22,10 @@ spec:
         image: {{ .Values.image.repository }}:{{ default .Chart.AppVersion .Values.image.tag }}
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         env:
-        - name: NODE-NAME
-          valueFrom:
-            fieldRef:
-              fieldPath: spec.nodeName
+          - name: NODE_NAME
+            valueFrom:
+              fieldRef:
+                fieldPath: spec.nodeName
         securityContext:
           allowPrivilegeEscalation: false
           capabilities:
