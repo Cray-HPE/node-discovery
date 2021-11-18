@@ -4,7 +4,6 @@
 
 image:
   repository: artifactory.algol60.net/csm-docker/stable/cray-node-discovery
-  # tag defaults to chart appVersion
   pullPolicy: IfNotPresent
 
 nameOverride: ""
