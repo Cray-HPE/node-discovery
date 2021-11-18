@@ -1,3 +1,15 @@
-apiVersion: v1
+apiVersion: v2
+version: 0.9.0
 name: cray-node-discovery
-version: 0.6.0
+description: Node feature discovery for detecting hardware features and system configuration
+keywords:
+  - node-discovery
+  - discovery
+home: https://github.com/Cray-HPE/node-discovery
+sources:
+  - https://github.com/Cray-HPE/node-discovery
+maintainers:
+  - name: bo-quan
+    url: https://github.com/bo-quan
+annotations:
+  artifacthub.io/license: MIT

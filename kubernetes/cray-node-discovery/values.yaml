@@ -2,10 +2,8 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
-imagesHost: dtr.dev.cray.com:443
-
 image:
-  repository: cray/cray-node-discovery
+  repository: artifactory.algol60.net/csm-docker/stable/cray-node-discovery
   pullPolicy: IfNotPresent
 
 nameOverride: ""
