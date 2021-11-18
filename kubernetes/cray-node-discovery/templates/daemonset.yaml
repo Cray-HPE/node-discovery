@@ -22,7 +22,7 @@ spec:
         image: {{ .Values.image.repository }}:{{ default .Chart.AppVersion .Values.image.tag }}
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         env:
-        - name: NODE_NAME
+        - name: NODE-NAME
           valueFrom:
             fieldRef:
               fieldPath: spec.nodeName

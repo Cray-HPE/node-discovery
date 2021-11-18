@@ -62,7 +62,7 @@ def clean_up_labels(api_instance, key):
     for to_remove in get_existing_labels(api_instance, key):
         labels[to_remove] = None
     body = {"metadata": {"labels": labels}}
-    api_instance.patch_node(os.environ['NODE_NAME'], body)
+    api_instance.patch_node(os.environ['NODE-NAME'], body)
 
 
 def get_existing_labels(api_instance, key):
@@ -75,7 +75,7 @@ def get_existing_labels(api_instance, key):
     - a set object which represents the label keys that match the
     KEY for this service.
     """
-    resp = api_instance.read_node(os.environ['NODE_NAME']).to_dict()
+    resp = api_instance.read_node(os.environ['NODE-NAME']).to_dict()
     all_labels = list(resp['metadata']['labels'].keys())
     matched_labels = [label for label in all_labels if label.startswith(key)]
     return set(matched_labels)
@@ -90,7 +90,7 @@ if __name__ == '__main__':
         raise
     api_instance = client.CoreV1Api()
     gc = GracefulExit(clean_up_labels, api_instance, KEY)
-    print("Managing label namespace '%s' for node '%s'" % (KEY, os.environ['NODE_NAME']))
+    print("Managing label namespace '%s' for node '%s'" % (KEY, os.environ['NODE-NAME']))
     while not gc.kill_now:
         labels = all_labels(api_instance)
         # Add that we're running
@@ -100,7 +100,7 @@ if __name__ == '__main__':
         for to_remove in existing_labels - set(labels.keys()):
             labels[to_remove] = None
         body = {"metadata": {"labels": labels}}
-        api_instance.patch_node(os.environ['NODE_NAME'], body)
+        api_instance.patch_node(os.environ['NODE-NAME'], body)
         for _ in range(30):
             if not gc.kill_now:
                 time.sleep(1)
