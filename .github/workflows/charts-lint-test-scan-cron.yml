@@ -1,7 +1,7 @@
 name: Cron Lint, test, and scan Helm charts
 on:
   schedule:
-    - cron: "0 47 * * *"
+    - cron: "47 1 * * *"
   workflow_dispatch:
 jobs:
   lint-test-scan:
