@@ -22,7 +22,7 @@
 # OTHER DEALINGS IN THE SOFTWARE.
 #
 apiVersion: v2
-version: 1.2.0
+version: 1.2.1
 name: cray-node-discovery
 description: Node feature discovery for detecting hardware features and system configuration
 keywords:
