@@ -22,7 +22,7 @@
 # OTHER DEALINGS IN THE SOFTWARE.
 #
 
-FROM docker.io/library/alpine:3.14 as testing_base
+FROM artifactory.algol60.net/csm-docker/stable/docker.io/library/alpine:3.14 as testing_base
 
 WORKDIR /usr/src/app
 
@@ -48,7 +48,7 @@ FROM testing_base as codestyle
 CMD [ "./docker_codestyle_entry.sh" ]
 
 
-FROM docker.io/library/alpine:3.14
+FROM artifactory.algol60.net/csm-docker/stable/docker.io/library/alpine:3.14
 
 WORKDIR /usr/src/app
 
