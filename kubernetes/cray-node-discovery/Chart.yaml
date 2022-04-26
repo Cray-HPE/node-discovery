@@ -22,7 +22,7 @@
 # OTHER DEALINGS IN THE SOFTWARE.
 #
 apiVersion: v2
-version: 1.2.1
+version: 1.2.4
 name: cray-node-discovery
 description: Node feature discovery for detecting hardware features and system configuration
 keywords:
@@ -36,3 +36,6 @@ maintainers:
   - name: kimjensen-hpe
 annotations:
   artifacthub.io/license: MIT
+  artifacthub.io/images: |
+    - name: cray-node-discovery
+      image: artifactory.algol60.net/csm-docker/stable/cray-node-discovery:1.2.4
