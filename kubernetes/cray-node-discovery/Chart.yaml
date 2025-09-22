@@ -1,7 +1,7 @@
 #
 # MIT License
 #
-# (C) Copyright 2021-2024 Hewlett Packard Enterprise Development LP
+# (C) Copyright 2021-2025 Hewlett Packard Enterprise Development LP
 #
 # Permission is hereby granted, free of charge, to any person obtaining a
 # copy of this software and associated documentation files (the "Software"),
@@ -22,7 +22,7 @@
 # OTHER DEALINGS IN THE SOFTWARE.
 #
 apiVersion: v2
-version: 1.2.5
+version: 1.2.6
 name: cray-node-discovery
 description: Node feature discovery for detecting hardware features and system configuration
 keywords:
@@ -33,9 +33,8 @@ sources:
   - https://github.com/Cray-HPE/node-discovery
 maintainers:
   - name: bo-quan
-  - name: kimjensen-hpe
 annotations:
   artifacthub.io/license: MIT
   artifacthub.io/images: |
     - name: cray-node-discovery
-      image: artifactory.algol60.net/csm-docker/stable/cray-node-discovery:1.2.5
+      image: artifactory.algol60.net/csm-docker/stable/cray-node-discovery:1.2.6
